@@ -15,15 +15,15 @@ jobs:
         run: pwd
 
       - name: List files in working directory
-        run: ls -la /home/runner/work/cypresslatest/cypresslatest/
+        run: ls -la
 
       - name: Install Dependencies
         run: npm install
-        working-directory: /home/runner/work/cypresslatest/cypresslatest/
+        working-directory: /cypresslatest/Cypress AUTOMATION-cctp
       
       - name: Build Project
         run: npm run build
-        working-directory: /home/runner/work/cypresslatest/cypresslatest/
+        working-directory: /cypresslatest/Cypress AUTOMATION-cctp
 
       - name: Make scripts executable
         run: chmod +x pngtobase64.js cypress/master.js
