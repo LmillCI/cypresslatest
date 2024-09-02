@@ -11,58 +11,56 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
-      - name: Cypress install
-        uses: cypress-io/github-action@v6
-        with:
-           run: npm install
-           runTests: false
-           build: npm run build
-        continue-on-error: true
+      - name: Install Dependencies
+        run: npm install
+      
+      - name: Build Project
+        run: npm run build
 
-     
       - name: Print working directory
         run: pwd
 
       - name: List files
         run: ls -la
-      - name: Make scripts executable
-        run: chmod +x  pngtobase64.js cypress/master.js
 
-      
+      - name: Make scripts executable
+        run: chmod +x pngtobase64.js cypress/master.js
 
       - name: Run imgtobase64 script
         run: node pngtobase64.js
+
       - name: Run readssinfo script
         run: node ./cypress/master.js
-     
-     
-      - name: Update screenshots  in repository
+
+      - name: Update screenshots in repository
         run: |
           git config --global user.email "lmillaccnt@gmail.com"
           git config --global user.name "LmillCI"
           git add cypress/screenshots
           git commit -m "Update screenshots"
           git push origin master
+
       - name: Upload screenshots artifact
         uses: actions/upload-artifact@v4.3.5
         with:
           name: save-screenshots
           if-no-files-found: error
           path: ./cypress/screenshots
-      - name: Update master json  in repository
+
+      - name: Update master json in repository
         run: |
           git config --global user.email "lmillaccnt@gmail.com"
           git config --global user.name "LmillCI"
           git add ./cypress
           git commit -m "Update masterjson"
           git push origin master
+
       - name: Upload master json
         uses: actions/upload-artifact@v4.3.5
         with:
           name: master json
           if-no-files-found: error
           path: ./cypress
-      
 
   cypress-run:
     runs-on: ubuntu-22.04
