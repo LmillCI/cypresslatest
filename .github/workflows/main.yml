@@ -32,7 +32,7 @@ jobs:
       - name: Run imgtobase64 script
         run: node pngtobase64.js
       - name: Run readssinfo script
-        run: node master.js
+        run: node cypress/master.js
      
      
       - name: Update screenshots  in repository
