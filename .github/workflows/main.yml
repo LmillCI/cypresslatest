@@ -18,9 +18,7 @@ jobs:
           build: npm run build
         continue-on-error: true
 
-      - name: Make scripts executable
-        run: chmod +x  pngtobase64.js master.js
-
+     
       - name: Print working directory
         run: pwd
 
