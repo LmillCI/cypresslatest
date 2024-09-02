@@ -1,0 +1,16 @@
+{
+    "demofile.cy.js": {
+        "./cypress/screenshots/Visit Page Test -- should visit the Amazon website.png": {
+            "TestfileName": "demofile.cy.js",
+            "Screenshotname": "Visit Page Test -- should visit the Amazon website.png",
+            "path": "./cypress/screenshots/Visit Page Test -- should visit the Amazon website.png",
+            "takenAt": "2024-09-02T05:21:48.469Z"
+        },
+        "./cypress/screenshots/Visit Page Test -- should visit the Amazon website (1).png": {
+            "TestfileName": "demofile.cy.js",
+            "Screenshotname": "Visit Page Test -- should visit the Amazon website (1).png",
+            "path": "./cypress/screenshots/Visit Page Test -- should visit the Amazon website (1).png",
+            "takenAt": "2024-09-02T05:22:00.386Z"
+        }
+    }
+}
