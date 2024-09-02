@@ -13,11 +13,11 @@ jobs:
       
       - name: Install Dependencies
         run: npm install
-        working-directory: ./Cypress AUTOMATION-cctp/package.json
+        working-directory: ./Cypress AUTOMATION-cctp
       
       - name: Build Project
         run: npm run build
-        working-directory: ./Cypress AUTOMATION-cctp/package.json
+        working-directory: ./Cypress AUTOMATION-cctp
 
       - name: Print working directory
         run: pwd
