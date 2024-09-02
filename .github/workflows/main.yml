@@ -11,19 +11,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
-      - name: Install Dependencies
-        run: npm install
-        working-directory: ./Cypress AUTOMATION-cctp
-      
-      - name: Build Project
-        run: npm run build
-        
-
       - name: Print working directory
         run: pwd
 
-      - name: List files
-        run: ls -la
+      - name: List files in working directory
+        run: ls -la /home/runner/work/cypresslatest/cypresslatest/
+
+      - name: Install Dependencies
+        run: npm install
+        working-directory: /home/runner/work/cypresslatest/cypresslatest/
+      
+      - name: Build Project
+        run: npm run build
+        working-directory: /home/runner/work/cypresslatest/cypresslatest/
 
       - name: Make scripts executable
         run: chmod +x pngtobase64.js cypress/master.js
